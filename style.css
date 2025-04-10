@@ -1,0 +1,497 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    margin: 0;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* To prevent image overflow */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .banner img {
+        object-fit: contain; /* Ensures the entire image is visible */
+    }
+}
+
+@media (max-width: 576px) {
+    .banner img {
+        object-fit: scale-down; /* Scales down the image further for very small screens */
+    }
+}
+
+
+.content h2, .content p {
+    text-align: center; /* Center-align text */
+    margin: 0 15px; /* Add slight side padding for text */
+}
+
+
+h1,h2{
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+}
+
+p{
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 15%
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    font-family: Poppins, sans-serif;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-top: 15%; /* Add top margin for spacing */
+    }
+    .card h4 {
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-top: 15%; /* Add top margin for spacing */
+    }
+    .card h4 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 8px;
+    }
+}
+
+/* Popup Modal */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content img {
+    width: 70%;
+    border-radius: 8px;
+}
+
+
+.popup-content h3 {
+    padding-top: 25px;
+}
+.popup-content p {
+    font-size: 12px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.play-buttons {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Add space between the buttons */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.play-buttons a img {
+    width: 120px; /* Adjust button size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.play-buttons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Adjust button layout for mobile view */
+@media (max-width: 576px) {
+    .play-buttons {
+        display: flex;
+        flex-wrap: wrap; /* Allow buttons to wrap */
+        justify-content: space-between; /* Space between buttons */
+        gap: 10px; /* Add spacing between buttons */
+    }
+
+    .store-btn {
+        flex: 0 0 48%; /* Two columns, each taking ~48% width */
+        text-align: center; /* Center align button content */
+    }
+
+    .store-btn img {
+        width: 100%; /* Scale the images to the button container */
+        max-width: 120px; /* Limit maximum width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+  .container1 {
+    padding: 2px 16px;
+  }
+
+.intro h1{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.intro p{
+    text-align: center;
+    padding-top: 50px;   
+    font-size: 20px;
+}
+
+@media (max-width:768px){
+    .intro{
+        padding-top: 10px;
+    }
+    .intro h1{
+        text-align: center;
+        padding-top: 75px;
+        font-size: 24px;
+    }
+    .intro p{
+        text-align: center;
+        padding-top: 20px;   
+        font-size: 16px;
+    }
+}
+
+@media (max-width:425px){
+    .intro{
+        padding-top: 10px;
+    }
+    .intro h1{
+        text-align: center;
+        padding-top: 50px;
+        font-size: 24px;
+    }
+    .intro p{
+        text-align: center;
+        padding-top: 20px; 
+        padding-left: 40px;
+        padding-right: 40px;  
+        font-size: 14px;
+    }
+}
+
+
+.offerintro{
+    background-color: #F1F8E8;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 100px;
+}
+
+.offercontent h2{
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.offercontentPara{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #10723F;
+}
+
+
+@media (max-width:768px){
+    .offerintro{
+        padding-top: 10px;
+        padding-bottom: 60px;
+        margin-top: 50px;
+    }
+    .offercontent h2{
+        text-align: center;
+        padding-top: 50px; 
+        font-size: 24px;
+    }
+    .offercontentPara{
+        text-align: center;
+        padding-top: 10px;   
+        font-size: 16px;
+    }
+}
+
+@media (max-width:425px){
+    .offerintro{
+        padding-top: 10px;
+        padding-bottom: 10%;
+        margin-top: 50px;
+    }
+    .offercontent h2{
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 40px;
+        padding-right: 40px; 
+        font-size: 24px;
+    }
+    .offercontentPara{
+        text-align: center;
+        padding-top: 10px;  
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+}
+
+.secondRow-22{
+    margin-top: 50px;
+}
+
+/* Container Styling */
+.offerImg {
+    max-width: 500px; /* Adjust image size */
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Make the image circular */
+    background-color: #ddd; /* Placeholder background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Crop to circle */
+}
+
+.whatwillyou{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    /* background-image: url('image/ban.jpg'); Add the image URL */
+    /* background-size: cover; Ensure the image covers the entire section */
+    /* background-position: center; Center the image */
+    /* background-repeat: no-repeat; Prevent image repetition */
+}
+
+@media(max-width: 425px){
+   .whatwillyou{
+    padding-top: 2px;
+   }
+   .offerImg{
+    display: none;
+    /* margin-left: 100px; */
+    /* text-align: center; */
+   } 
+}
+
+.offerImg img {
+    width: 100%;
+    height: auto;
+}
+
+/* Text Content Styling */
+.offerContent1 {
+    text-align: left;
+    padding-top: 110px;
+}
+
+.offerContent1 h2 {
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bold; */
+    /* font-size: 24px; */
+    margin-bottom: 15px;
+}
+
+.offerContent1 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.offerContent1 li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .whatwillyou{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .offerImg {
+        max-width: 250px; /* Smaller image for tablets */
+    }
+
+    .offerContent1{
+        padding-top: 5px;
+    }
+    .offerContent1 h2 {
+        font-size: 20px;
+    }
+
+    .offerContent1 ul {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .offerImg {
+        max-width: 200px; /* Smaller image for mobile */
+    }
+
+    .offerContent1 h2 {
+        font-size: 18px;
+    }
+
+    .offerContent1 ul {
+        font-size: 12px;
+    }
+}
+
+.downloadApp{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #FFF6E9;
+}
+
+
+/* Text Content Styling */
+.downLoadAppContent {
+    text-align: left;
+    padding-top: 110px;
+}
+
+.downLoadAppContent h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #5E1675;
+    margin-bottom: 15px;
+}
+
+.downLoadAppContent p {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.store-buttons {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Add space between the buttons */
+}
+
+.store-buttons a img {
+    width: 150px; /* Adjust button size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.store-buttons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .downLoadAppContent {
+        text-align: left;
+        padding-top: 10px;
+    }
+    .downloadAppImg img{
+        padding-top: 5px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .downLoadAppContent{
+        padding-top: 5px;
+    }
+    .store-buttons {
+        padding-top: 5px;
+        text-align: center;
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 20px; /* Reduce the gap between buttons */
+    }
+
+    .store-buttons a img {
+        width: 120px; /* Adjust button size for smaller screens */
+    }
+
+    .downloadAppImg img{
+        padding-top: 40px;
+        width: 100%;
+    }
+}
